@@ -47,3 +47,11 @@ Algorithm Design:
 Key Problem: 
 Algorithm Design:
 
+acceptance testing , alpha testing , beta testing , black box testing , white box testing , identify dependencies and prerequisites
+decomposition diagrams , flowcharts x3 each
+export designs to pdf
+
+rationale stuff
+emerging tech in the farming sector
+user acceptance criteria
+how data will be handled and passed thru front + back end
