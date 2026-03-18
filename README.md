@@ -6,12 +6,9 @@ Erd / data dictionaries on:
 acceptance testing , alpha testing , beta testing , black box testing , white box testing
 decomposition diagrams
 
-rationale stuff
 emerging tech in the farming sector
 how data will be handled and passed thru front + back end
-allergies
 uk produced food
-dashboard page description
 
 <img width="900" height="763" alt="image" src="https://github.com/user-attachments/assets/1fb0b6d4-ae4c-49e0-a05c-d492c03506e3" />
 <img width="909" height="144" alt="image" src="https://github.com/user-attachments/assets/edd8bb21-ef4b-45b8-8ad8-6b10a2fdbcbe" />
