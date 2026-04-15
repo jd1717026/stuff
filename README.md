@@ -2,7 +2,7 @@
 <img width="323" height="531" alt="image" src="https://github.com/user-attachments/assets/b1239071-0274-4656-a8da-d2ae81c5e2c9" />
 <img width="325" height="440" alt="image" src="https://github.com/user-attachments/assets/d285b535-5d11-4f2d-94cc-37610e96c83a" />
 <img width="911" height="275" alt="image" src="https://github.com/user-attachments/assets/4dc6118e-895d-482c-a21c-dc3e678eebd2" />
-<img width="824" height="382" alt="image" src="https://github.com/user-attachments/assets/ce0547ab-7529-4aa9-aa6b-87c54d683668" />
+<img width="824" height="382" alt="image" src="https://github.com/user-attachments/assets/ce0547ab-7529-4aa9-aa6b-87c54d683668" /><br>
 files: dash.css, create.sql, dash.php, stock data, connect, dash.js - for dashboard <br>
 ---<br>
 create.sql<br>
@@ -30,8 +30,8 @@ INSERT INTO products (name, stock) VALUES
 ("Milk", 100),
 ("Beef", 121)
 
----
-dashboard.js
+---<br>
+dashboard.js<br>
 
 let chart;
 let countdown = 10;
@@ -127,8 +127,8 @@ function startCountdown() {
 loadDashboard();
 startCountdown();
 
----
-dashboard.css
+---<br>
+dashboard.css<br>
 
 body {
   font-family: "Grandstander", cursive;
