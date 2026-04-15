@@ -31,3 +31,100 @@ INSERT INTO products (name, stock) VALUES
 ("Beef", 121)
 
 ---
+dashboard.js
+
+let chart;
+let countdown = 10;
+
+function loadDashboard() {
+  fetch("../php/get_stock_data.php")
+    .then((r) => r.json())
+    .then((data) => {
+      updateChart(data);
+      updateTable(data);
+    });
+  countdown = 10;
+}
+
+function updateChart(data) {
+  const ctx = document.getElementById("chart").getContext("2d");
+
+  if (chart) chart.destroy();
+
+  chart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: data.map((i) => i.name),
+      datasets: [
+        {
+          label: "Stock Remaining",
+          data: data.map((i) => i.stock_left),
+          backgroundColor: "#4CAF50",
+          borderRadius: 8,
+        },
+        {
+          label: "Orders",
+          data: data.map((i) => i.total_ordered),
+          backgroundColor: "#FF9800",
+          borderRadius: 8,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      animation: {
+        duration: 800,
+        easing: "easeOutQuart",
+      },
+      plugins: {
+        legend: {
+          position: "top",
+          labels: { boxWidth: 20, padding: 15 },
+        },
+        tooltip: {
+          backgroundColor: "#333",
+          titleColor: "#fff",
+          bodyColor: "#fff",
+        },
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: { precision: 0 },
+          grid: { color: "rgba(0,0,0,0.08)" },
+        },
+        x: { grid: { display: false } },
+      },
+    },
+  });
+}
+
+function updateTable(data) {
+  const tbody = document.querySelector("#tbl tbody");
+  tbody.innerHTML = "";
+  data.forEach((i) => {
+    tbody.innerHTML += `
+        <tr>
+            <td>${i.name}</td>
+            <td>${i.stock}</td>
+            <td>${i.total_ordered}</td>
+            <td>${i.stock_left}</td>
+        </tr>`;
+  });
+}
+
+function startCountdown() {
+  const span = document.getElementById("countdown");
+  setInterval(() => {
+    countdown--;
+    if (countdown <= 0) {
+      loadDashboard();
+    }
+    span.textContent = countdown;
+  }, 1000);
+}
+
+loadDashboard();
+startCountdown();
+
+---
