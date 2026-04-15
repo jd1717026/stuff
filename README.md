@@ -3,7 +3,7 @@
 <img width="325" height="440" alt="image" src="https://github.com/user-attachments/assets/d285b535-5d11-4f2d-94cc-37610e96c83a" />
 <img width="911" height="275" alt="image" src="https://github.com/user-attachments/assets/4dc6118e-895d-482c-a21c-dc3e678eebd2" />
 <img width="824" height="382" alt="image" src="https://github.com/user-attachments/assets/ce0547ab-7529-4aa9-aa6b-87c54d683668" />
-(https://github.com/user-attachments/files/26142217/Creating.a.simple.dashboard.pdf)
+files: dash.css, create.sql, dash.php, stock data, connect, dash.js - for dashboard
 ---
 create.sql
 CREATE DATABASE testdb IF NOT EXISTS
@@ -128,3 +128,60 @@ loadDashboard();
 startCountdown();
 
 ---
+dashboard.css
+
+body {
+  font-family: "Grandstander", cursive;
+  background: #f0f4f8;
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.update-timer {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.chart-card,
+.table-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background: #e0e6f2;
+}
+
+tr:nth-child(even) {
+  background: #f9faff;
+}
+
+canvas {
+  max-height: 350px;
+}
