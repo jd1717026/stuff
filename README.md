@@ -182,6 +182,13 @@ tr:nth-child(even) {
   background: #f9faff;
 }
 
+---<br>
+imgs:
+<img width="321" height="74" alt="image" src="https://github.com/user-attachments/assets/a67a089b-832e-4cdb-bbba-362f0c52878b" />
+<img width="228" height="576" alt="image" src="https://github.com/user-attachments/assets/76fba4ae-4894-4b2c-993e-05f68ca9a883" />
+
+
+
 canvas {
   max-height: 350px;
 }
